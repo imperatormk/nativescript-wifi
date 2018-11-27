@@ -33,5 +33,9 @@ module.exports = {
     getConnectionData: function() {
         var toaster = new tv.channelhopper.ipsync.toaster.Toaster();
         return toaster.getConnectionData(context);
+    },
+    changeWifiConfiguration: function() {
+        var toaster = new tv.channelhopper.ipsync.toaster.Toaster();
+        return toaster.changeWifiConfiguration(context, false, null);
     }
 };
