@@ -1,0 +1,24 @@
+{
+  "name": "nativescript-wifi",
+  "version": "1.0.4",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imperatormk/nativescript-wifi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imperatormk/nativescript-wifi/issues"
+  },
+  "homepage": "https://github.com/imperatormk/nativescript-wifi#readme",
+  "nativescript": {
+    "platforms": {
+      "android": "5.0.0"
+    }
+  }
+}
