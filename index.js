@@ -6,7 +6,7 @@ module.exports = {
         var toaster = new tv.channelhopper.ipsync.toaster.Toaster();
         toaster.show(context);
     },
-    getNetwork: function() {
+    getLocalIpAddress: function() {
         var toaster = new tv.channelhopper.ipsync.toaster.Toaster();
         return toaster.getLocalIpAddress(context);
     }
