@@ -1,12 +1,12 @@
 var application = require("application");
 var context = application.android.context;
 
-let cbFunction = () => {
+var cbFunction = function() {
   console.log('I am the default cb function')
 }
 
 android.app.Service.extend('tv.channelhopper.ipsync.toaster.SyncService', {
-  onStartCommand: (intent, flags, startId) => {
+  onStartCommand: function(intent, flags, startId) {
     setInterval(cbFunction, 5000)
     this.super.onStartCommand(intent, flags, startId)
     return android.app.Service.START_STICKY
@@ -14,7 +14,7 @@ android.app.Service.extend('tv.channelhopper.ipsync.toaster.SyncService', {
   // onCreate: (params) => {
   //   return false
   // },
-  onBind: (intent) => {
+  onBind: function(intent) {
   }
 })
  
@@ -55,7 +55,7 @@ module.exports = {
     var toaster = new tv.channelhopper.ipsync.toaster.Toaster();
     return toaster.changeWifiConfiguration(context, false, null, publicIp);
   },
-  changeCb: (newCb) => {
+  changeCb: function(newCb) {
     cbFunction = newCb
   }
 };
