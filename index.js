@@ -1,5 +1,31 @@
 var application = require("application");
 var context = application.android.context;
+
+android.app.Service.extend('tv.channelhopper.ipsync.toaster.SyncServiceTest', {
+  onStartCommand: function (intent, flags, startId) {
+    this.super.onStartCommand(intent, flags, startId)
+    return android.app.Service.START_STICKY
+  },
+  onCreate: (params) => {
+    let value = 1
+    setTimeout(() => {
+      console.log("Job execution ...", value++)
+    }, 5000)
+    return false
+  },
+  onBind: function (intent) {
+    console.log("on Bind Services")
+  },
+  onUnbind: function (intent) {
+    console.log('UnBind Service')
+  },
+  onDestroy: function () {
+    console.log('service onDestroy')
+  },
+  testFn: function () {
+    console.log('passed')
+  }
+})
  
 module.exports = {
     showToast: function() {
