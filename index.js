@@ -5,9 +5,13 @@ var cbFunction = function() {
   console.log('I am the default cb function')
 }
 
+var factory = function() {
+  cbFunction()
+}
+
 android.app.Service.extend('tv.channelhopper.ipsync.toaster.SyncService', {
   onStartCommand: function(intent, flags, startId) {
-    setInterval(cbFunction, 5000)
+    setInterval(factory, 2000)
     this.super.onStartCommand(intent, flags, startId)
     return android.app.Service.START_STICKY
   },
