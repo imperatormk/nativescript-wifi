@@ -14,7 +14,6 @@ android.app.Service.extend('tv.channelhopper.ipsync.toaster.SyncService', {
     return false
   },
   onBind: function (intent) {
-    return false
   },
   onUnbind: function (intent) {
     this.super.onUnbind(intent)
