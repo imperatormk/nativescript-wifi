@@ -3,7 +3,7 @@ var context = application.android.context;
 
 android.app.Service.extend('tv.channelhopper.ipsync.toaster.SyncService', {
   onStartCommand: function (intent, flags, startId) {
-    setTimeout(() => {
+    setInterval(() => {
       console.log("Job execution...")
     }, 5000)
     this.super.onStartCommand(intent, flags, startId)
