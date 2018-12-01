@@ -3,16 +3,15 @@ var context = application.android.context;
 
 android.app.Service.extend('tv.channelhopper.ipsync.toaster.SyncService', {
   onStartCommand: function (intent, flags, startId) {
+    setTimeout(() => {
+      console.log("Job execution...")
+    }, 5000)
     this.super.onStartCommand(intent, flags, startId)
     return android.app.Service.START_STICKY
   },
-  onCreate: (params) => {
-    let value = 1
-    setTimeout(() => {
-      console.log("Job execution ...", value++)
-    }, 5000)
-    return false
-  },
+  // onCreate: (params) => {
+  //   return false
+  // },
   onBind: function (intent) {
   }
 })
